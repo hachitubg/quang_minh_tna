@@ -1,9 +1,10 @@
-import { useState, FormEvent } from "react"
+import { useState, useEffect, FormEvent } from "react"
 import { companyInfo } from "@/config/companyInfo"
 import { submitSupportForm } from "@/lib/emailService"
-import { isEmailConfigured } from "@/config/emailConfig"
+import { isEmailConfigured, loadEmailConfig } from "@/config/emailConfig"
 
 const SupportForm = () => {
+  const [configLoaded, setConfigLoaded] = useState(false)
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
   const [errorMessage, setErrorMessage] = useState("")
   const [formData, setFormData] = useState({
@@ -13,6 +14,10 @@ const SupportForm = () => {
     subject: "",
     message: "",
   })
+
+  useEffect(() => {
+    loadEmailConfig().then(() => setConfigLoaded(true))
+  }, [])
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -45,7 +50,7 @@ const SupportForm = () => {
     }
   }
 
-  const emailConfigured = isEmailConfigured()
+  const emailConfigured = configLoaded && isEmailConfigured()
 
   return (
     <div className="contact-content">
@@ -58,7 +63,7 @@ const SupportForm = () => {
         Hotline: <a href={companyInfo.contact.phoneLink}>{companyInfo.contact.phoneDisplay}</a>
       </p>
 
-      {!emailConfigured && (
+      {configLoaded && !isEmailConfigured() && (
         <div className="alert alert-warning mb-4" role="alert">
           <strong>Chưa cấu hình email.</strong> Form sẽ không gửi được. Vui lòng xem file{" "}
           <code>EMAIL_CONFIG.md</code> để hướng dẫn cấu hình.

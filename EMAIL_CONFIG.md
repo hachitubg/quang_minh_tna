@@ -2,6 +2,16 @@
 
 Website sử dụng **EmailJS** để gửi email từ form mà không cần backend. Miễn phí **200 email/tháng**.
 
+## Nguồn cấu hình (2 cách)
+
+| Môi trường | Cách cấu hình |
+|------------|----------------|
+| **Localhost** | File `.env` (biến `VITE_EMAILJS_*`) – xem Bước 5 bên dưới. |
+| **Host (sau khi build)** | File **`public/email-config.json`** – được load khi app chạy. Repo đã có file mẫu với config hiện tại; nếu bạn build và deploy, form gửi email sẽ hoạt động trên host mà không cần tạo `.env` trên server. |
+
+- Trên **host**: Vite build không có `.env` nên app đọc cấu hình từ **`public/email-config.json`** (file này được copy vào `dist/` khi build). Bạn có thể sửa `public/email-config.json` rồi build lại nếu muốn đổi key/template.
+- Trên **localhost**: Có thể dùng `.env` (ưu tiên) hoặc cùng file `email-config.json`.
+
 ## Luồng gửi email
 
 - **Chỉ gửi tới Sales** – Khi khách điền form → email chứa thông tin form được gửi tới `sales@quangminhtna.vn`. **Không** gửi auto email xác nhận cho khách; bộ phận sales sẽ trả lời khách hàng.
