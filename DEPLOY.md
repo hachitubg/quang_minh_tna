@@ -1,5 +1,17 @@
 # Hướng dẫn Deploy website Quang Minh TNA lên VPS
 
+## Đã thực hiện trên VPS (31/01/2026)
+
+- **Node.js 20** đã cài.
+- **Clone repo** vào `/var/www/quang_minh_tna`, đã `npm install` và `npm run build` (thư mục `dist/` đã có).
+- **Nginx (host):** Site Quang Minh TNA chạy **riêng trên port 8080**, không dùng port 80 để không ảnh hưởng các site khác (mgf.com.vn, halife đang chạy qua Docker trên port 80).
+- **Cấu hình:** `/etc/nginx/sites-available/quang_minh_tna` — `listen 8080`, `root /var/www/quang_minh_tna/dist`.
+- **sites-enabled:** Chỉ bật `quang_minh_tna`; mgf.com.vn và default đã tắt trên **host** Nginx (các site kia vẫn chạy bình thường qua Docker).
+
+**Truy cập site Quang Minh TNA:** **http://222.255.214.198:8080**
+
+---
+
 ## Thông tin VPS
 
 - **IP:** 222.255.214.198  
