@@ -1,8 +1,13 @@
-import { SuAndroid, SuApple, SuBoost, SuInternet, SuSmartWatch, SuTV } from "@/lib/icons"
+import { PhanBonBot, PhanBonNuoc, NanoIcon, PhanBonHat, PhanBonHuuCo, ThuocBVTV } from "@/lib/icons"
 import SectionTitle from "../ui/sectionTitle"
 import { offerItems } from "@/db/homePageData"
 
-const iconMap = [SuInternet, SuAndroid, SuApple, SuSmartWatch, SuTV, SuBoost]
+const iconMap = [PhanBonHat, PhanBonBot, PhanBonNuoc, PhanBonHuuCo, ThuocBVTV, NanoIcon]
+
+const scrollToContact = () => {
+    const el = document.getElementById("lien-he")
+    el?.scrollIntoView({ behavior: "smooth", block: "start" })
+}
 
 const Offer = () => {
     return (
@@ -25,7 +30,12 @@ const Offer = () => {
                             className={`col-xl-2 col-lg-4 col-md-4 col-sm-6 wow slideUp `}
                             data-delay={item.delay}
                         >
-                            <div className={`offer-items ${item.isActive ? 'active' : ''}`}>
+                            <button
+                                type="button"
+                                className={`offer-items offer-items--clickable ${item.isActive ? 'active' : ''}`}
+                                onClick={scrollToContact}
+                                aria-label={`${item.title} - Chuyển đến phần liên hệ`}
+                            >
                                 <div className="shape-top">
                                     <img src="/img/shape/offer-top.png" alt="shape-img" />
                                 </div>
@@ -36,7 +46,7 @@ const Offer = () => {
                                 <div className="content">
                                     <h5>{item.title}</h5>
                                 </div>
-                            </div>
+                            </button>
                         </div>
                     ))}
                 </div>

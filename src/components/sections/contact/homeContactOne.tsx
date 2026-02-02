@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const HomeContactOne = () => {
     return (
-        <div className="contact-section-21 section-padding section-bg">
+        <div id="lien-he" className="contact-section-21 section-padding section-bg">
             <div className="contact-image-2">
                 <img src="/img/contact-2.jpg" alt="img" />
             </div>

@@ -33,7 +33,7 @@ export const marqueeItems = [
 export const offerItems = [
   { id: 1, title: "Phân bón hạt", isActive: false, delay: ".2" },
   { id: 2, title: "Phân bón bột", isActive: false, delay: ".4" },
-  { id: 3, title: "Phân bón nước", isActive: true, delay: ".6" },
+  { id: 3, title: "Phân bón nước", isActive: false, delay: ".6" },
   { id: 4, title: "Phân bón hữu cơ", isActive: false, delay: ".8" },
   { id: 5, title: "Thuốc BVTV", isActive: false, delay: ".9" },
   { id: 6, title: "Công nghệ nano", isActive: false, delay: ".9" },

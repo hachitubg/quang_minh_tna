@@ -38,16 +38,11 @@ const AboutTwo = () => {
                                     Nền tảng sản xuất phân bón và thuốc bảo vệ thực vật ứng dụng công nghệ nano.
                                     Đầu tư bài bản theo định hướng sản xuất khép kín – chủ động kiểm soát chất lượng, tiến độ và chi phí ngay từ gốc.
                                 </p>
+                                <p className="mt-3 mt-md-0 wow slideUp" data-delay=".5">
+                                    Được thành lập vào năm 2010, là một công ty sản xuất phân bón và thuốc bảo vệ thực vật ứng dụng công nghệ nano.
+                                    Sản phẩm đa dạng, đáp ứng đa dạng nhu cầu thị trường.
+                                </p>
                                 <div className="about-icon-items">
-                                    <div className="icon-items wow slideUp" data-delay=".7">
-                                        <div className="icon">
-                                            <img src="/img/about/icon-4.svg" alt="icon-img" />
-                                        </div>
-                                        <div className="content">
-                                            <h4>Công nghệ nano</h4>
-                                            <p>Nguyên liệu mịn đồng đều, tăng hiệu quả hấp thu</p>
-                                        </div>
-                                    </div>
                                     <div className="icon-items wow slideUp" data-delay=".9">
                                         <div className="icon">
                                             <img src="/img/about/icon-5.svg" alt="icon-img" />
@@ -58,19 +53,34 @@ const AboutTwo = () => {
                                         </div>
                                     </div>
                                 </div>
+                                <div className="about-icon-items">
+                                    <div className="icon-items wow slideUp" data-delay=".7">
+                                        <div className="icon">
+                                            <img src="/img/about/icon-4.svg" alt="icon-img" />
+                                        </div>
+                                        <div className="content">
+                                            <h4>Công nghệ nano</h4>
+                                            <p>Nguyên liệu mịn đồng đều, tăng hiệu quả hấp thu</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="about-icon-items">
+                                    <div className="icon-items wow slideUp" data-delay=".7">
+                                        <div className="icon">
+                                            <img src="/img/about/icon-1.svg" alt="icon-img" />
+                                        </div>
+                                        <div className="content">
+                                            <h4>Gia công nhanh chóng</h4>
+                                            <p>Hoàn thành gia công nhanh chóng, đảm bảo tiêu chuẩn quốc tế, không làm chậm tiến độ sản xuất</p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div className="about-author">
                                     <div className="about-button wow slideUp" data-delay=".5">
                                         <Link to="/gioi-thieu" className="theme-btn">
                                             Xem thêm
                                             <i className="fa-solid fa-arrow-right-long" />
                                         </Link>
-                                    </div>
-                                    <div className="author-image wow slideUp" data-delay=".7">
-                                        <img src="/img/about/author.png" alt="author-img" />
-                                        <div className="content">
-                                            <h6>Quang Minh TNA</h6>
-                                            <p>Đối tác sản xuất chiến lược</p>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

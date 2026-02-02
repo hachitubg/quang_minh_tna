@@ -145,6 +145,14 @@
     padding: 30px 10px;
     padding-top: 1px;
 
+    &.offer-items--clickable {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        width: 100%;
+        font: inherit;
+    }
+
     &::before {
         @include before;
         border: 1px solid $white;
@@ -485,6 +493,42 @@
 
         @include breakpoint (max-xxl){
             display: none;
+        }
+    }
+
+    /* Trang Giới thiệu: PC hiển thị 1 cột, icon trái + text trái */
+    &.process-work-wrapper--vertical {
+        .row {
+            flex-direction: column;
+        }
+        .row > [class*="col-"] {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        /* Icon và text cùng 1 dòng: text trái, sát nhau, cả khối căn giữa màn hình */
+        .work-process-items--vertical {
+            @include breakpoint (lg) {
+                flex-direction: row !important;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+            }
+        }
+        .work-process-items--vertical .icon {
+            @include breakpoint (lg) {
+                margin: 0 !important;
+                flex-shrink: 0;
+            }
+        }
+        .work-process-items--vertical .content {
+            @include breakpoint (lg) {
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+                text-align: left;
+                flex: 1;
+                max-width: 560px;
+            }
         }
     }
 }

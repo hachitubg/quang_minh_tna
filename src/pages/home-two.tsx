@@ -11,12 +11,12 @@ const HomeTwo = () => {
   return (
     <>
       <HeroTwo />
+      <Offer/>
       <AboutTwo/>
       <MarqueThree/>
-      <Offer/>
-      <PartnersOne/>
-      <ChooseUs/>
       <AchievementTwo achievementWrapperClass="style-2" className="section-bg-2"/>
+      <ChooseUs/>
+      <PartnersOne/>
       <HomeContactOne/>
     </>
   )
