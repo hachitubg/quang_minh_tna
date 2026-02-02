@@ -7,7 +7,7 @@ const PartnersOne = ({ className }: { className?: string }) => {
         <div className={`brand-section fix section-padding ${className}`}>
             <div className="container">
                 <div className="brand-wrapper">
-                    <h6 className="text-center wow slideUp" data-delay=".3">20+ thương hiệu tin dùng</h6>
+                    <h6 className="text-center wow slideUp" data-delay=".3">Các thương hiệu hợp tác</h6>
                     <Swiper
                         breakpoints={{
                             1199: {

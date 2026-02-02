@@ -51,7 +51,7 @@ const Footer = () => {
                             <div className="icon">{info.icon}</div>
                             <div className="content">
                                 <p>{info.label}</p>
-                                <h3>
+                                <h3 style={{ fontSize: '16px' }}>
                                     {info.link ? (
                                         <Link to={info.link}>{info.value}</Link>
                                     ) : (
