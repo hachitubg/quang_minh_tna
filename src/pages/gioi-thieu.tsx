@@ -80,7 +80,7 @@ const GioiThieu = () => {
       </section>
 
       {/* Pháp lý & Chứng nhận */}
-      <section className="section-padding fix">
+      <section id="phap-ly" className="section-padding fix">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">

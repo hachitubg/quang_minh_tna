@@ -29,13 +29,7 @@ const quickLinks = [
     { text: "Liên hệ", link: "/lien-he" },
 ];
 
-const services = [
-    { text: "Phân bón dạng hạt", link: "/gioi-thieu#san-pham" },
-    { text: "Phân bón dạng bột", link: "/gioi-thieu#san-pham" },
-    { text: "Phân bón dạng nước", link: "/gioi-thieu#san-pham" },
-    { text: "Phân bón hữu cơ", link: "/gioi-thieu#san-pham" },
-    { text: "Thuốc bảo vệ thực vật", link: "/gioi-thieu#san-pham" },
-];
+const certificateLink = { text: "Giấy tờ chứng nhận của nhà máy", link: "/gioi-thieu#phap-ly" };
 
 const Footer = () => {
     return (
@@ -80,12 +74,7 @@ const Footer = () => {
                                     </Link>
                                 </div>
                                 <div className="footer-content">
-                                    <p>
-                                        {companyInfo.slogan}
-                                    </p>
-                                    <p className="small">
-                                        {companyInfo.name} - Sản xuất phân bón và thuốc bảo vệ thực vật ứng dụng công nghệ nano.
-                                    </p>
+                                    <p>{companyInfo.slogan}</p>
                                     <div className="social-icon d-flex align-items-center">
                                         <a href={companyInfo.social.zalo} target="_blank" rel="noopener noreferrer" title="Zalo">
                                             <i className="fa-solid fa-phone" />
@@ -126,17 +115,15 @@ const Footer = () => {
                         >
                             <div className="single-footer-widget style-margin">
                                 <div className="widget-head">
-                                    <h3>Sản phẩm</h3>
+                                    <h3>Chứng nhận</h3>
                                 </div>
                                 <ul className="list-area">
-                                    {services.map((service, index) => (
-                                        <li key={index}>
-                                            <Link to={service.link}>
-                                                <i className="fa-solid fa-chevron-right" />
-                                                {service.text}
-                                            </Link>
-                                        </li>
-                                    ))}
+                                    <li>
+                                        <Link to={certificateLink.link}>
+                                            <i className="fa-solid fa-chevron-right" />
+                                            {certificateLink.text}
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -149,10 +136,7 @@ const Footer = () => {
                                     <h3>Về chúng tôi</h3>
                                 </div>
                                 <div className="footer-content">
-                                    <p>
-                                        Nhà máy sản xuất phân bón và thuốc bảo vệ thực vật ứng dụng công nghệ nano.
-                                        Đối tác sản xuất chiến lược của hơn 20 thương hiệu trên toàn quốc.
-                                    </p>
+                                    <p>Nhà máy phân bón & thuốc BVTV công nghệ nano. Đối tác của hơn 20 thương hiệu toàn quốc.</p>
                                 </div>
                             </div>
                         </div>
