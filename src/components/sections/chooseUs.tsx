@@ -23,7 +23,7 @@ const ChooseUs = () => {
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="choose-us-image wow slideUp" data-delay=".4">
-                                <img src="/img/choose/01.png" alt="img" />
+                                <img src="/img_quangminh/nongdan.png" alt="img" />
                             </div>
                         </div>
                         <div className="col-lg-6 mt-4 mt-lg-0">

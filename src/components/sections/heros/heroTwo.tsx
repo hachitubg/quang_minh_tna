@@ -4,7 +4,7 @@ import { heroData } from "@/db/homePageData"
 
 const HeroTwo = () => {
     return (
-        <section className="hero-section hero-2 fix bg-cover" style={{ backgroundImage: 'url("/img/hero/hero-4.jpg")' }}>
+        <section className="hero-section hero-2 fix bg-cover" style={{ backgroundImage: 'url("/img_quangminh/Backgroud_1.jpg")' }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6">

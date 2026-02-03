@@ -3,7 +3,11 @@ import { companyInfo } from "@/config/companyInfo"
 import { submitSupportForm } from "@/lib/emailService"
 import { isEmailConfigured, loadEmailConfig } from "@/config/emailConfig"
 
-const SupportForm = () => {
+interface SupportFormProps {
+  showFullContent?: boolean
+}
+
+const SupportForm = ({ showFullContent = true }: SupportFormProps) => {
   const [configLoaded, setConfigLoaded] = useState(false)
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
   const [errorMessage, setErrorMessage] = useState("")
@@ -54,98 +58,80 @@ const SupportForm = () => {
 
   return (
     <div className="contact-content">
-      <div className="support-header-section">
-        <h2 className="support-main-title">Dịch vụ hỗ trợ khách hàng / đối tác</h2>
-        <p className="support-intro">
-          Quang Minh TNA không chỉ sản xuất mà đóng vai trò <strong>hậu phương kỹ thuật</strong> cho đối tác
-        </p>
-      </div>
+      {showFullContent && (
+        <>
+          <div className="support-header-section">
+            <h2 className="support-main-title">Dịch vụ hỗ trợ khách hàng / đối tác</h2>
+            <p className="support-intro">
+              Quang Minh TNA không chỉ sản xuất mà đóng vai trò <strong>hậu phương kỹ thuật</strong> cho đối tác
+            </p>
+          </div>
 
-      <div className="support-features-section">
-        <div className="row g-4">
-          <div className="col-lg-6">
-            <div className="support-feature-card">
-              <div className="feature-icon">
-                <i className="fa-solid fa-headset" />
-              </div>
-              <h5 className="feature-title">Tư vấn giải pháp sản phẩm</h5>
-            </div>
-          </div>
-          <div className="col-lg-6">
-            <div className="support-feature-card">
-              <div className="feature-icon">
-                <i className="fa-solid fa-flask" />
-              </div>
-              <h5 className="feature-title">Hỗ trợ cải tiến công thức theo phản hồi thị trường</h5>
-            </div>
-          </div>
-          <div className="col-lg-6">
-            <div className="support-feature-card">
-              <div className="feature-icon">
-                <i className="fa-solid fa-graduation-cap" />
-              </div>
-              <h5 className="feature-title">Đào tạo chuyên môn sản phẩm</h5>
-            </div>
-          </div>
-          <div className="col-lg-6">
-            <div className="support-feature-card">
-              <div className="feature-icon">
-                <i className="fa-solid fa-book-open" />
-              </div>
-              <h5 className="feature-title">Chuyển giao kiến thức kỹ thuật</h5>
-            </div>
-          </div>
-          <div className="col-lg-6">
-            <div className="support-feature-card">
-              <div className="feature-icon">
-                <i className="fa-solid fa-images" />
-              </div>
-              <h5 className="feature-title">Cung cấp tài liệu, hình ảnh, nội dung truyền thông bán hàng</h5>
-            </div>
-          </div>
-          <div className="col-lg-6">
-            <div className="support-feature-card">
-              <div className="feature-icon">
-                <i className="fa-solid fa-bullhorn" />
-              </div>
-              <h5 className="feature-title">Hỗ trợ xây dựng thông điệp sản phẩm</h5>
-            </div>
-          </div>
+          <div className="support-features-section">
+        <div className="support-section-content">
+          <h3 className="support-section-title">Dịch vụ hỗ trợ toàn diện</h3>
+          <ul className="support-features-list">
+            <li>
+              <i className="fa-solid fa-check-circle" />
+              <span>Tư vấn giải pháp sản phẩm</span>
+            </li>
+            <li>
+              <i className="fa-solid fa-check-circle" />
+              <span>Hỗ trợ cải tiến công thức theo phản hồi thị trường</span>
+            </li>
+            <li>
+              <i className="fa-solid fa-check-circle" />
+              <span>Đào tạo chuyên môn sản phẩm</span>
+            </li>
+            <li>
+              <i className="fa-solid fa-check-circle" />
+              <span>Chuyển giao kiến thức kỹ thuật</span>
+            </li>
+            <li>
+              <i className="fa-solid fa-check-circle" />
+              <span>Cung cấp tài liệu, hình ảnh, nội dung truyền thông bán hàng</span>
+            </li>
+            <li>
+              <i className="fa-solid fa-check-circle" />
+              <span>Hỗ trợ xây dựng thông điệp sản phẩm</span>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <div className="support-benefits-section">
-        <h4 className="benefits-title">Giúp đối tác</h4>
-        <div className="row g-4">
-          <div className="col-lg-4">
-            <div className="benefit-card">
-              <div className="benefit-icon">
-                <i className="fa-solid fa-rocket" />
-              </div>
-              <h5 className="benefit-text">Tự tin ra thị trường</h5>
+      <div className="support-benefits-wrapper">
+        <h3 className="benefits-main-title">Giúp đối tác</h3>
+        <div className="benefits-blocks">
+          <div className="benefit-block benefit-green">
+            <div className="benefit-icon">
+              <i className="fa-solid fa-rocket" />
             </div>
+            <h4 className="benefit-title">Tự tin ra thị trường</h4>
+            <div className="benefit-watermark">1</div>
           </div>
-          <div className="col-lg-4">
-            <div className="benefit-card">
-              <div className="benefit-icon">
-                <i className="fa-solid fa-chart-line" />
-              </div>
-              <h5 className="benefit-text">Bán hàng bài bản hơn</h5>
+          
+          <div className="benefit-block benefit-blue">
+            <div className="benefit-icon">
+              <i className="fa-solid fa-chart-line" />
             </div>
+            <h4 className="benefit-title">Bán hàng bài bản hơn</h4>
+            <div className="benefit-watermark">2</div>
           </div>
-          <div className="col-lg-4">
-            <div className="benefit-card">
-              <div className="benefit-icon">
-                <i className="fa-solid fa-seedling" />
-              </div>
-              <h5 className="benefit-text">Gia tăng hiệu quả triển khai thực tế</h5>
+          
+          <div className="benefit-block benefit-orange">
+            <div className="benefit-icon">
+              <i className="fa-solid fa-seedling" />
             </div>
+            <h4 className="benefit-title">Gia tăng hiệu quả triển khai thực tế</h4>
+            <div className="benefit-watermark">3</div>
           </div>
         </div>
       </div>
+        </>
+      )}
 
       <div className="support-form-section">
-        <h3 className="form-section-title">Yêu cầu hỗ trợ</h3>
+        <h3 className="form-section-title">{showFullContent ? 'Yêu cầu hỗ trợ' : 'Liên hệ với chúng tôi'}</h3>
         <p>
           Điền form bên dưới, yêu cầu sẽ được chuyển tới bộ phận sales. Bộ phận sales sẽ liên hệ lại bạn sớm nhất.
         </p>

@@ -25,7 +25,7 @@ const LienHe = () => {
                 <ContactAddress />
               </div>
               <div className="col-lg-6">
-                <SupportForm />
+                <SupportForm showFullContent={false} />
               </div>
             </div>
           </div>
