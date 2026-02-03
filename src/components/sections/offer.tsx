@@ -20,7 +20,7 @@ const Offer = () => {
             </div>
             <div className="container">
                 <SectionTitle className="text-center">
-                    <SectionTitle.SubTitle>Sản phẩm đa dạng</SectionTitle.SubTitle>
+                    <SectionTitle.SubTitle className="text-white">Sản phẩm đa dạng</SectionTitle.SubTitle>
                     <SectionTitle.Title className="text-white">Phân bón & thuốc BVTV <br />theo công nghệ nano</SectionTitle.Title>
                 </SectionTitle>
                 <div className="row">

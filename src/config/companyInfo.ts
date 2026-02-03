@@ -24,7 +24,7 @@ export const companyInfo = {
     phoneLink: "tel:0961167791",
     email: "sales@quangminhtna.vn",
     emailDisplay: "sales@quangminhtna.vn",
-    address: "Xóm 9, Phường Trường Thi, Tỉnh Ninh Bình",
+    address: "Phường Trường Thi, Tỉnh Ninh Bình",
     addressFull: "Xóm 9, Phường Trường Thi, Thành phố Ninh Bình, Tỉnh Ninh Bình",
   },
 

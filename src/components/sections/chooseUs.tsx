@@ -33,30 +33,75 @@ const ChooseUs = () => {
                                     <SectionTitle.Title>Công nghệ lõi <br />& lợi ích nano</SectionTitle.Title>
                                 </SectionTitle>
                                 <p className="mt-3 mt-md-0 wow slideUp" data-delay=".5">
-                                    Dây chuyền công nghệ châu Âu kết hợp hệ thống nghiền nano hiện đại.
-                                    Nguyên liệu mịn đồng đều, tăng khả năng phân tán, nâng cao hiệu quả hấp thu.
+                                    Quang Minh TNA ứng dụng công nghệ châu Âu kết hợp hệ thống nghiền nano tiên tiến, mang lại hiệu quả vượt trội cho sản phẩm phân bón và thuốc bảo vệ thực vật.
                                 </p>
-                                <div className="choose-list-area">
-                                    <ul className="choose-list wow slideUp" data-delay=".7">
-                                        <li>
-                                            <i className="fa-solid fa-check" />
-                                            Nghiên cứu – phát triển công thức
-                                        </li>
-                                        <li>
-                                            <i className="fa-solid fa-check" />
-                                            Gia công trọn gói từ A–Z
-                                        </li>
-                                    </ul>
-                                    <ul className="choose-list wow slideUp" data-delay=".9">
-                                        <li>
-                                            <i className="fa-solid fa-check" />
-                                            Chất lượng đồng đều giữa các lô hàng
-                                        </li>
-                                        <li>
-                                            <i className="fa-solid fa-check" />
-                                            Hỗ trợ pháp lý & thiết kế bao bì
-                                        </li>
-                                    </ul>
+                                
+                                <div className="choose-features-section">
+                                    <div className="feature-group wow slideUp" data-delay=".5">
+                                        <h4 className="feature-title">Công nghệ lõi</h4>
+                                        <ul className="choose-list">
+                                            <li>
+                                                <i className="fa-solid fa-check" />
+                                                Dây chuyền công nghệ châu Âu
+                                            </li>
+                                            <li>
+                                                <i className="fa-solid fa-check" />
+                                                Hệ thống nghiền nano hiện đại
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div className="feature-group wow slideUp" data-delay=".7">
+                                        <h4 className="feature-title">Lợi ích công nghệ nano</h4>
+                                        <ul className="choose-list">
+                                            <li>
+                                                <i className="fa-solid fa-check" />
+                                                Nguyên liệu được xử lý mịn, đồng đều
+                                            </li>
+                                            <li>
+                                                <i className="fa-solid fa-check" />
+                                                Tăng khả năng phân tán
+                                            </li>
+                                            <li>
+                                                <i className="fa-solid fa-check" />
+                                                Nâng cao hiệu quả hấp thu của cây trồng
+                                            </li>
+                                            <li>
+                                                <i className="fa-solid fa-check" />
+                                                Giảm sai số phối trộn
+                                            </li>
+                                            <li>
+                                                <i className="fa-solid fa-check" />
+                                                Đảm bảo hàm lượng hoạt chất ổn định
+                                            </li>
+                                            <li>
+                                                <i className="fa-solid fa-check" />
+                                                Giữ chất lượng đồng đều giữa các lô hàng
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div className="feature-group wow slideUp" data-delay=".9">
+                                        <h4 className="feature-title">Các tiêu chí kỹ thuật được kiểm soát chặt</h4>
+                                        <ul className="choose-list">
+                                            <li>
+                                                <i className="fa-solid fa-check" />
+                                                Độ phân tán
+                                            </li>
+                                            <li>
+                                                <i className="fa-solid fa-check" />
+                                                Độ bám dính
+                                            </li>
+                                            <li>
+                                                <i className="fa-solid fa-check" />
+                                                Hàm lượng hoạt chất
+                                            </li>
+                                            <li>
+                                                <i className="fa-solid fa-check" />
+                                                Tính an toàn sản phẩm
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div className="progress-wrap">
                                     <div className="pro-items wow slideUp" data-delay=".5">

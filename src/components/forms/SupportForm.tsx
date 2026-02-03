@@ -54,37 +54,128 @@ const SupportForm = () => {
 
   return (
     <div className="contact-content">
-      <h2>Yêu cầu hỗ trợ</h2>
-      <p>
-        Điền form bên dưới, yêu cầu sẽ được chuyển tới bộ phận sales. Bộ phận sales sẽ liên hệ lại bạn.
-      </p>
-      <p className="small text-muted">
-        <i className="fa-solid fa-phone me-2" />
-        Hotline: <a href={companyInfo.contact.phoneLink}>{companyInfo.contact.phoneDisplay}</a>
-      </p>
+      <div className="support-header-section">
+        <h2 className="support-main-title">Dịch vụ hỗ trợ khách hàng / đối tác</h2>
+        <p className="support-intro">
+          Quang Minh TNA không chỉ sản xuất mà đóng vai trò <strong>hậu phương kỹ thuật</strong> cho đối tác
+        </p>
+      </div>
 
-      {configLoaded && !isEmailConfigured() && (
-        <div className="alert alert-warning mb-4" role="alert">
-          <strong>Chưa cấu hình email.</strong> Form sẽ không gửi được. Vui lòng xem file{" "}
-          <code>EMAIL_CONFIG.md</code> để hướng dẫn cấu hình.
+      <div className="support-features-section">
+        <div className="row g-4">
+          <div className="col-lg-6">
+            <div className="support-feature-card">
+              <div className="feature-icon">
+                <i className="fa-solid fa-headset" />
+              </div>
+              <h5 className="feature-title">Tư vấn giải pháp sản phẩm</h5>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            <div className="support-feature-card">
+              <div className="feature-icon">
+                <i className="fa-solid fa-flask" />
+              </div>
+              <h5 className="feature-title">Hỗ trợ cải tiến công thức theo phản hồi thị trường</h5>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            <div className="support-feature-card">
+              <div className="feature-icon">
+                <i className="fa-solid fa-graduation-cap" />
+              </div>
+              <h5 className="feature-title">Đào tạo chuyên môn sản phẩm</h5>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            <div className="support-feature-card">
+              <div className="feature-icon">
+                <i className="fa-solid fa-book-open" />
+              </div>
+              <h5 className="feature-title">Chuyển giao kiến thức kỹ thuật</h5>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            <div className="support-feature-card">
+              <div className="feature-icon">
+                <i className="fa-solid fa-images" />
+              </div>
+              <h5 className="feature-title">Cung cấp tài liệu, hình ảnh, nội dung truyền thông bán hàng</h5>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            <div className="support-feature-card">
+              <div className="feature-icon">
+                <i className="fa-solid fa-bullhorn" />
+              </div>
+              <h5 className="feature-title">Hỗ trợ xây dựng thông điệp sản phẩm</h5>
+            </div>
+          </div>
         </div>
-      )}
+      </div>
 
-      {status === "success" && (
-        <div className="alert alert-success" role="alert">
-          <i className="fa-solid fa-check-circle me-2" />
-          Gửi thành công! Bộ phận sales sẽ liên hệ bạn sớm.
+      <div className="support-benefits-section">
+        <h4 className="benefits-title">Giúp đối tác</h4>
+        <div className="row g-4">
+          <div className="col-lg-4">
+            <div className="benefit-card">
+              <div className="benefit-icon">
+                <i className="fa-solid fa-rocket" />
+              </div>
+              <h5 className="benefit-text">Tự tin ra thị trường</h5>
+            </div>
+          </div>
+          <div className="col-lg-4">
+            <div className="benefit-card">
+              <div className="benefit-icon">
+                <i className="fa-solid fa-chart-line" />
+              </div>
+              <h5 className="benefit-text">Bán hàng bài bản hơn</h5>
+            </div>
+          </div>
+          <div className="col-lg-4">
+            <div className="benefit-card">
+              <div className="benefit-icon">
+                <i className="fa-solid fa-seedling" />
+              </div>
+              <h5 className="benefit-text">Gia tăng hiệu quả triển khai thực tế</h5>
+            </div>
+          </div>
         </div>
-      )}
+      </div>
 
-      {status === "error" && (
-        <div className="alert alert-danger" role="alert">
-          <i className="fa-solid fa-exclamation-circle me-2" />
-          {errorMessage}
-        </div>
-      )}
+      <div className="support-form-section">
+        <h3 className="form-section-title">Yêu cầu hỗ trợ</h3>
+        <p>
+          Điền form bên dưới, yêu cầu sẽ được chuyển tới bộ phận sales. Bộ phận sales sẽ liên hệ lại bạn sớm nhất.
+        </p>
+        <p className="small text-muted">
+          <i className="fa-solid fa-phone me-2" />
+          Hotline: <a href={companyInfo.contact.phoneLink}>{companyInfo.contact.phoneDisplay}</a>
+        </p>
 
-      <form
+        {configLoaded && !isEmailConfigured() && (
+          <div className="alert alert-warning mb-4" role="alert">
+            <strong>Chưa cấu hình email.</strong> Form sẽ không gửi được. Vui lòng xem file{" "}
+            <code>EMAIL_CONFIG.md</code> để hướng dẫn cấu hình.
+          </div>
+        )}
+
+        {status === "success" && (
+          <div className="alert alert-success" role="alert">
+            <i className="fa-solid fa-check-circle me-2" />
+            Gửi thành công! Bộ phận sales sẽ liên hệ bạn sớm.
+          </div>
+        )}
+
+        {status === "error" && (
+          <div className="alert alert-danger" role="alert">
+            <i className="fa-solid fa-exclamation-circle me-2" />
+            {errorMessage}
+          </div>
+        )}
+
+        <form
         id="support-form"
         onSubmit={handleSubmit}
         className="contact-form-items mt-4"
@@ -174,6 +265,7 @@ const SupportForm = () => {
           </div>
         </div>
       </form>
+      </div>
     </div>
   )
 }
