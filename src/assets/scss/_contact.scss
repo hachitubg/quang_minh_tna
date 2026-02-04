@@ -476,6 +476,103 @@
     }
 }
 
+// Support Page - Background image + decorative shapes
+.support-page-section {
+    position: relative;
+    overflow: hidden;
+    background-image: url("/img/service/service-bg-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(248, 250, 248, 0.55) 100%);
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+// Circle shape decorations with animation
+.support-page-section .support-shape {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    animation: cir36 10s linear infinite;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &.support-shape-1 {
+        top: 8%;
+        right: 5%;
+        width: 180px;
+        height: 180px;
+        opacity: 0.5;
+
+        @include breakpoint (max-xl) {
+            width: 120px;
+            height: 120px;
+            top: 5%;
+            right: 2%;
+        }
+
+        @include breakpoint (max-md) {
+            width: 80px;
+            height: 80px;
+            opacity: 0.35;
+        }
+    }
+
+    &.support-shape-2 {
+        bottom: 15%;
+        left: 3%;
+        width: 220px;
+        height: 220px;
+        opacity: 0.4;
+        animation-direction: reverse;
+        animation-duration: 15s;
+
+        @include breakpoint (max-xl) {
+            width: 140px;
+            height: 140px;
+            bottom: 10%;
+        }
+
+        @include breakpoint (max-md) {
+            width: 90px;
+            height: 90px;
+            opacity: 0.25;
+        }
+    }
+
+    &.support-shape-3 {
+        top: 45%;
+        right: 12%;
+        width: 100px;
+        height: 100px;
+        opacity: 0.35;
+        animation-duration: 12s;
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+    }
+}
+
 // Support Form - Animations
 @keyframes supportFadeInUp {
     from {
@@ -522,8 +619,7 @@
         left: 0;
         width: 56px;
         height: 4px;
-        background: linear-gradient(90deg, $theme-color 0%, rgba(29, 143, 44, 0.5) 100%);
-        border-radius: 2px;
+        background-color: $theme-color;
     }
 
     @include breakpoint (max-md) {
@@ -556,282 +652,146 @@
     }
 }
 
-// 2-column grid: Features + Benefits side by side on desktop
+// Support - 2 columns: features (trái, dài xuống) | benefits (phải)
 .support-content-grid {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 24px;
-    margin-bottom: 44px;
+    margin-bottom: 40px;
+    margin-top: 0;
+    align-items: stretch;
 
     @include breakpoint (max-lg) {
         grid-template-columns: 1fr;
-        gap: 24px;
-        margin-bottom: 36px;
     }
 }
 
-.support-features-section {
-    padding: 32px 36px;
-    background-color: $white;
-    border: 1px solid $border-color;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    position: relative;
-    overflow: hidden;
-    transition: box-shadow 0.35s ease, border-color 0.35s ease;
+.support-features-box {
+    height: 100%;
+    min-height: 0;
 
-    &::before {
-        @include before;
-        left: 0;
-        width: 4px;
-        background: linear-gradient(180deg, $theme-color 0%, rgba(29, 143, 44, 0.6) 100%);
-        transform: scaleY(0);
-        transform-origin: bottom;
-        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    &:hover {
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-        border-color: rgba(29, 143, 44, 0.2);
-
-        &::before {
-            transform: scaleY(1);
-        }
-    }
-
-    @include breakpoint (max-md) {
-        padding: 28px 24px;
-    }
-
-    .support-section-content {
-        position: relative;
-    }
-
-    .support-section-title {
-        font-size: 17px;
-        font-weight: 700;
-        color: $header-color;
-        margin-bottom: 20px;
+    .content {
+        height: 100%;
         display: flex;
-        align-items: center;
-        gap: 10px;
-
-        i {
-            color: $theme-color;
-            font-size: 18px;
-        }
+        flex-direction: column;
     }
 
     .support-features-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px 20px;
-
-        @include breakpoint (max-lg) {
-            grid-template-columns: 1fr;
-        }
-
-        li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            font-size: 15px;
-            color: $header-color;
-            font-weight: 500;
-            padding: 10px 0;
-            border-radius: 6px;
-            transition: all 0.25s ease;
-            animation: supportFadeInUp 0.45s ease backwards;
-
-            &:nth-child(1) { animation-delay: 0.2s; }
-            &:nth-child(2) { animation-delay: 0.25s; }
-            &:nth-child(3) { animation-delay: 0.3s; }
-            &:nth-child(4) { animation-delay: 0.35s; }
-            &:nth-child(5) { animation-delay: 0.4s; }
-            &:nth-child(6) { animation-delay: 0.45s; }
-
-            @include breakpoint (max-md) {
-                font-size: 14px;
-                gap: 10px;
-                padding: 8px 0;
-            }
-
-            i {
-                color: $theme-color;
-                font-size: 12px;
-                margin-top: 6px;
-                flex-shrink: 0;
-                width: 18px;
-                height: 18px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: rgba(29, 143, 44, 0.1);
-                border-radius: 50%;
-                transition: all 0.25s ease;
-            }
-
-            span {
-                flex: 1;
-            }
-
-            &:hover {
-                padding-left: 8px;
-
-                i {
-                    background: rgba(29, 143, 44, 0.2);
-                    transform: scale(1.1);
-                }
-            }
-        }
+        flex: 1;
     }
 }
 
-.support-benefits-wrapper {
-    .benefits-main-title {
-        font-size: 17px;
-        font-weight: 700;
-        color: $header-color;
-        margin-bottom: 20px;
+.support-benefits-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.support-box.service-box-items {
+    margin-top: 0;
+
+    .icon.icon-fa {
+        img {
+            display: none;
+        }
+
+        &::before {
+            display: none;
+        }
+
+        i {
+            display: block;
+            font-size: 42px;
+            color: $theme-color;
+            @include transition;
+        }
+    }
+
+    &:hover .icon.icon-fa i {
+        color: $white;
+    }
+}
+
+.support-features-box .content h4 {
+    margin-bottom: 15px;
+
+    a {
+        color: inherit;
+        pointer-events: none;
+    }
+}
+
+.support-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 30px;
+
+    li {
         display: flex;
-        align-items: center;
-        gap: 10px;
+        align-items: flex-start;
+        gap: 14px;
+        font-size: 15px;
+        color: $header-color;
+        font-weight: 500;
 
         i {
             color: $theme-color;
             font-size: 18px;
+            margin-top: 2px;
+            flex-shrink: 0;
+            width: 24px;
+            text-align: center;
+        }
+    }
+}
+
+.support-features-box.service-box-items:hover {
+    .support-features-list li {
+        color: $white;
+
+        i {
+            color: $white;
         }
     }
 
-    .benefits-blocks {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
+    .content h4 {
+        color: $white;
     }
+}
 
-    .benefit-block {
-        position: relative;
-        padding: 24px 56px 24px 80px;
-        background-color: $white;
-        border: 1px solid $border-color;
-        border-radius: 10px;
-        overflow: hidden;
-        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        cursor: default;
+.support-features-box .icon.icon-fa i {
+    font-size: 48px;
+}
 
-        @include breakpoint (max-md) {
-            padding: 20px 48px 20px 72px;
-        }
 
-        .benefit-step {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 32px;
-            font-weight: 800;
-            color: rgba(29, 143, 44, 0.12);
-            line-height: 1;
-            transition: all 0.35s ease;
-        }
+.support-box.service-box-items:hover .content h4 {
+    color: $white;
 
-        &::before {
-            @include before;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background-color: $theme-color;
-            transform: scaleY(0);
-            transform-origin: center;
-            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        &:hover {
-            transform: translateX(6px);
-            border-color: rgba(29, 143, 44, 0.35);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-
-            &::before {
-                transform: scaleY(1);
-            }
-
-            .benefit-step {
-                color: rgba(29, 143, 44, 0.25);
-                transform: translateY(-50%) scale(1.08);
-            }
-
-            .benefit-icon {
-                background-color: $theme-color;
-                color: $white;
-                transform: scale(1.05);
-            }
-        }
-
-        .benefit-icon {
-            position: absolute;
-            left: 24px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 44px;
-            height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: $bg-color;
-            border-radius: 10px;
-            color: $theme-color;
-            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-
-            i {
-                font-size: 18px;
-            }
-        }
-
-        .benefit-title {
-            font-size: 15px;
-            font-weight: 600;
-            color: $header-color;
-            margin: 0;
-            line-height: 1.4;
-
-            @include breakpoint (max-md) {
-                font-size: 14px;
-            }
-        }
+    a {
+        color: $white;
     }
 }
 
 .support-form-section {
     margin-top: 0;
-    padding: 36px 40px 40px;
-    background: linear-gradient(180deg, $white 0%, $bg-color 100%);
-    border: 1px solid $border-color;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    padding: 40px 40px 44px;
+    background-color: $white;
+    box-shadow: $shadow;
+    border-top: 4px solid $theme-color;
 
     @include breakpoint (max-md) {
-        padding: 28px 24px 32px;
+        padding: 32px 24px 36px;
     }
 
     .form-section-title {
         font-size: 20px;
         font-weight: 700;
         color: $header-color;
-        margin-bottom: 8px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-
-        &::before {
-            content: "";
-            width: 4px;
-            height: 22px;
-            background: linear-gradient(180deg, $theme-color 0%, rgba(29, 143, 44, 0.6) 100%);
-            border-radius: 2px;
-        }
+        margin-bottom: 12px;
 
         @include breakpoint (max-md) {
             font-size: 18px;
@@ -847,10 +807,9 @@
         &.small.text-muted {
             font-size: 14px;
             margin-bottom: 24px;
-            padding: 12px 16px;
-            background: rgba(29, 143, 44, 0.06);
-            border-radius: 8px;
-            border-left: 3px solid $theme-color;
+            padding: 14px 18px;
+            background-color: $bg-color;
+            border-left: 4px solid $theme-color;
 
             a {
                 color: $theme-color;
@@ -871,24 +830,25 @@
             }
 
             input, textarea {
-                border-radius: 8px;
+                border-radius: 0;
                 transition: all 0.25s ease;
 
                 &:hover:not(:focus) {
-                    border-color: rgba(29, 143, 44, 0.3);
+                    border-color: rgba(29, 143, 44, 0.4);
                 }
 
                 &:focus {
                     border-color: $theme-color;
-                    box-shadow: 0 0 0 3px rgba(29, 143, 44, 0.12);
+                    box-shadow: 0 0 0 2px rgba(29, 143, 44, 0.15);
                 }
             }
         }
     }
 
     .alert {
-        border-radius: 8px;
+        border-radius: 0;
         border: none;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        border-left: 4px solid;
+        box-shadow: $shadow;
     }
 }

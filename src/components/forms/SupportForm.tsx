@@ -68,50 +68,50 @@ const SupportForm = ({ showFullContent = true }: SupportFormProps) => {
             </p>
           </div>
 
-          <div className="support-content-grid">
-            <div className="support-features-section support-animate support-animate-delay-1">
-              <div className="support-section-content">
-                <h3 className="support-section-title">
-                  <i className="fa-solid fa-layer-group" />
-                  Dịch vụ hỗ trợ toàn diện
-                </h3>
+          <div className="support-content-grid support-animate support-animate-delay-1">
+            <div className="service-box-items style-2 support-box support-features-box">
+              <div className="icon icon-fa">
+                <i className="fa-solid fa-layer-group" aria-hidden />
+              </div>
+              <div className="content">
+                <h4>Dịch vụ hỗ trợ toàn diện</h4>
                 <ul className="support-features-list">
-                  <li><i className="fa-solid fa-check" /><span>Tư vấn giải pháp sản phẩm</span></li>
-                  <li><i className="fa-solid fa-check" /><span>Hỗ trợ cải tiến công thức theo phản hồi thị trường</span></li>
-                  <li><i className="fa-solid fa-check" /><span>Đào tạo chuyên môn sản phẩm</span></li>
-                  <li><i className="fa-solid fa-check" /><span>Chuyển giao kiến thức kỹ thuật</span></li>
-                  <li><i className="fa-solid fa-check" /><span>Cung cấp tài liệu, hình ảnh, nội dung truyền thông bán hàng</span></li>
-                  <li><i className="fa-solid fa-check" /><span>Hỗ trợ xây dựng thông điệp sản phẩm</span></li>
+                  <li><i className="fa-solid fa-comments" aria-hidden /><span>Tư vấn giải pháp sản phẩm</span></li>
+                  <li><i className="fa-solid fa-flask" aria-hidden /><span>Hỗ trợ cải tiến công thức theo phản hồi thị trường</span></li>
+                  <li><i className="fa-solid fa-graduation-cap" aria-hidden /><span>Đào tạo chuyên môn sản phẩm</span></li>
+                  <li><i className="fa-solid fa-book-open" aria-hidden /><span>Chuyển giao kiến thức kỹ thuật</span></li>
+                  <li><i className="fa-solid fa-folder-open" aria-hidden /><span>Cung cấp tài liệu, hình ảnh, nội dung truyền thông bán hàng</span></li>
+                  <li><i className="fa-solid fa-bullhorn" aria-hidden /><span>Hỗ trợ xây dựng thông điệp sản phẩm</span></li>
                 </ul>
               </div>
             </div>
 
-            <div className="support-benefits-wrapper support-animate support-animate-delay-2">
-              <h3 className="benefits-main-title">
-                <i className="fa-solid fa-arrow-trend-up" />
-                Giúp đối tác
-              </h3>
-              <div className="benefits-blocks">
-                <div className="benefit-block">
-                  <span className="benefit-step">01</span>
-                  <div className="benefit-icon">
-                    <i className="fa-solid fa-rocket" />
-                  </div>
-                  <h4 className="benefit-title">Tự tin ra thị trường</h4>
+            <div className="support-benefits-col support-animate support-animate-delay-2">
+              <div className="service-box-items style-2 support-box">
+                <div className="icon icon-fa">
+                  <i className="fa-solid fa-rocket" aria-hidden />
                 </div>
-                <div className="benefit-block">
-                  <span className="benefit-step">02</span>
-                  <div className="benefit-icon">
-                    <i className="fa-solid fa-chart-line" />
-                  </div>
-                  <h4 className="benefit-title">Bán hàng bài bản hơn</h4>
+                <div className="content">
+                  <h4>Tự tin ra thị trường</h4>
+                  <p>Đối tác tự tin triển khai sản phẩm với sự hỗ trợ toàn diện</p>
                 </div>
-                <div className="benefit-block">
-                  <span className="benefit-step">03</span>
-                  <div className="benefit-icon">
-                    <i className="fa-solid fa-seedling" />
-                  </div>
-                  <h4 className="benefit-title">Gia tăng hiệu quả triển khai thực tế</h4>
+              </div>
+              <div className="service-box-items style-2 support-box">
+                <div className="icon icon-fa">
+                  <i className="fa-solid fa-chart-line" aria-hidden />
+                </div>
+                <div className="content">
+                  <h4>Bán hàng bài bản hơn</h4>
+                  <p>Quy trình chuẩn hóa từ tư vấn đến chuyển giao</p>
+                </div>
+              </div>
+              <div className="service-box-items style-2 support-box">
+                <div className="icon icon-fa">
+                  <i className="fa-solid fa-seedling" aria-hidden />
+                </div>
+                <div className="content">
+                  <h4>Gia tăng hiệu quả triển khai</h4>
+                  <p>Đào tạo chuyên môn và hỗ trợ thực tế tại thị trường</p>
                 </div>
               </div>
             </div>
