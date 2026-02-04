@@ -17,8 +17,7 @@ const ServiceCard = ({ service, className }: { service: ServiceDataType; classNa
                     {service.description}
                 </p>
                 <Link to={service.link} className="theme-btn-2 mt-3">
-                    Xem thêm
-                    <i className="fa-solid fa-arrow-right-long" />
+                    Liên hệ ngay
                 </Link>
             </div>
         </div>

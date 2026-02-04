@@ -21,9 +21,9 @@ const AboutTwo = () => {
                                         <p>Thương hiệu đối tác</p>
                                     </div>
                                 </div>
-                                <div className="about-image-1 bg-cover wow slideLeft" data-delay=".3" style={{ backgroundImage: 'url("/img_quangminh/2.jpg")' }}>
+                                <div className="about-image-1 bg-cover wow slideLeft" data-delay=".3" style={{ backgroundImage: 'url("/img_quangminh/may nghien nano 2.jpg")' }}>
                                     <div className="about-image-2 wow slideUp" data-delay=".5">
-                                        <img width={300} src="/img_quangminh/3.jpg" alt="about-img" />
+                                        <img width={300} src="/img_quangminh/banner nha may 3.jpg" alt="about-img" />
                                     </div>
                                 </div>
                             </div>

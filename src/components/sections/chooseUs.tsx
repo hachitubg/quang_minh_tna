@@ -103,34 +103,6 @@ const ChooseUs = () => {
                                         </ul>
                                     </div>
                                 </div>
-                                <div className="progress-wrap">
-                                    <div className="pro-items wow slideUp" data-delay=".5">
-                                        <div className="pro-head">
-                                            <h6 className="title">
-                                                Chất lượng ổn định
-                                            </h6>
-                                            <span className="point">
-                                                100%
-                                            </span>
-                                        </div>
-                                        <div className="progress">
-                                            <div className="progress-value" />
-                                        </div>
-                                    </div>
-                                    <div className="pro-items wow slideUp" data-delay=".7">
-                                        <div className="pro-head">
-                                            <h6 className="title">
-                                                Giao hàng đúng tiến độ
-                                            </h6>
-                                            <span className="point">
-                                                98%
-                                            </span>
-                                        </div>
-                                        <div className="progress">
-                                            <div className="progress-value style-two" />
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

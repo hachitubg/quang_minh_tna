@@ -1,11 +1,11 @@
 import AboutTwo from "@/components/sections/about/aboutTwo"
-import AchievementTwo from "@/components/sections/achievements/achievementTwo"
 import ChooseUs from "@/components/sections/chooseUs"
 import HomeContactOne from "@/components/sections/contact/homeContactOne"
 import HeroTwo from "@/components/sections/heros/heroTwo"
 import MarqueThree from "@/components/sections/marques/marqueThree"
 import Offer from "@/components/sections/offer"
 import PartnersOne from "@/components/sections/partners/partnersOne"
+import ServicesTwo from "@/components/sections/services/servicesTwo"
 
 const HomeTwo = () => {
   return (
@@ -14,7 +14,7 @@ const HomeTwo = () => {
       <Offer/>
       <AboutTwo/>
       <MarqueThree/>
-      <AchievementTwo achievementWrapperClass="style-2" className="section-bg-2"/>
+      <ServicesTwo/>
       <ChooseUs/>
       <PartnersOne/>
       <HomeContactOne/>

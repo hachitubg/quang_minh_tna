@@ -70,7 +70,7 @@ const Footer = () => {
                             <div className="single-footer-widget">
                                 <div className="widget-head">
                                     <Link to="/">
-                                        <img src={companyInfo.logo} alt={`${companyInfo.shortName} - Logo`} style={{ maxHeight: '60px' }} />
+                                        <img src={companyInfo.logo} alt={`${companyInfo.shortName} - Logo`} style={{ maxHeight: '130px' }} />
                                     </Link>
                                 </div>
                                 <div className="footer-content">

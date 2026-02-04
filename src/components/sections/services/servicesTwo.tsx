@@ -4,11 +4,11 @@ import SectionTitle from "@/components/ui/sectionTitle"
 
 const ServicesTwo = () => {
     return (
-        <section id="services" className="service-section-2 fix section-padding pb-0">
+        <section id="services" className="service-section-2 fix section-padding">
             <div className="container">
                 <SectionTitle className="text-center">
-                    <SectionTitle.SubTitle>Sản phẩm của chúng tôi</SectionTitle.SubTitle>
-                    <SectionTitle.Title>Đa dạng phân bón & thuốc bảo vệ<br /> thực vật</SectionTitle.Title>
+                    <SectionTitle.SubTitle>Năng lực sản xuất</SectionTitle.SubTitle>
+                    <SectionTitle.Title>Con số ấn tượng của Quang Minh TNA</SectionTitle.Title>
                 </SectionTitle>
                 <div className="row">
                     {servicesTwoData.map((service) => (
@@ -23,7 +23,6 @@ const ServicesTwo = () => {
                 </div>
             </div>
         </section>
-
     )
 }
 

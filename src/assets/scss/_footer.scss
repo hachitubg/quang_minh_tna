@@ -36,9 +36,9 @@
 
             h3 {
                 font-weight: bold;
-                color: $white;
+                color: #404A3D;
                 font-size: 24px;
-                border-bottom: 1px solid $white;
+                border-bottom: 1px solid #404A3D;
                 display: inline-block;
                 padding-bottom: 20px;
             }
@@ -46,7 +46,7 @@
 
         .footer-content {
             p {
-                color: $text-color-2;
+                color: #404A3D;
             }
 
             .social-icon {
@@ -66,11 +66,11 @@
                 text-align: center;
                 font-size: 16px;
                 display: block;
-                color: $white;
+                color: #404A3D;
                 transition: all .4s ease-in-out;
                 text-align: center;
                 background-color: transparent;
-                border: 1px solid rgba(227, 227, 227, .2);
+                border: 1px solid rgba(64, 74, 61, .2);
 
                     &:hover {
                         background-color: $theme-color;
@@ -84,7 +84,7 @@
                 margin-top: 20px;
 
                 li {
-                    color: $white;
+                    color: #404A3D;
 
                     &:not(:last-child){
                         margin-bottom: 20px;
@@ -92,13 +92,13 @@
 
                    i {
                         font-size: 16px;
-                        color: $white;
+                        color: #404A3D;
                         margin-right: 10px;
                         font-size: 20px;
                    }
 
                    a {
-                        color: $white;
+                        color: #404A3D;
                    }
                 }
             }
@@ -150,7 +150,7 @@
                 }
 
                 a {
-                    color: $text-color-2;
+                    color: #404A3D;
 
                     i {
                         margin-right: 5px;
@@ -186,7 +186,7 @@
                         margin-bottom: 10px;
 
                         li {
-                            color: $white;
+                            color: #404A3D;
                         }
                     }
 
@@ -194,7 +194,7 @@
                         font-size: 16px;
 
                         a {
-                            color: $white;
+                            color: #404A3D;
 
                             &:hover {
                                 color: $theme-color;
@@ -265,18 +265,18 @@
 
                         .icon {
                             font-size: 24px;
-                            color: $white;
+                            color: #404A3D;
                         }
 
                         .content {
                             h6 {
                                 font-weight: 700;
-                                color: $white;
+                                color: #404A3D;
                                 margin-bottom: 5px;
                             }
 
                             a {
-                                color: $text-color-2;
+                                color: #404A3D;
                             }
                         }
                     }
@@ -296,7 +296,7 @@
     padding: 20px 0;
     position: relative;
     z-index: 9;
-    background-color: $theme-color;
+    background-color: $theme-color !important;
     
     .footer-wrapper {
        @include breakpoint (max-lg){
@@ -456,7 +456,7 @@
         gap: 10px;
 
         h6 {
-            color: $white;
+            color: #404A3D;
 
             span {
                 color: $theme-color;
