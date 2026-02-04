@@ -12,7 +12,7 @@ const HoTroKhachHang = () => {
       <section className="contact-section fix section-padding">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-8">
+            <div className="col-lg-10">
               <SupportForm />
             </div>
           </div>

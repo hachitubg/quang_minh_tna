@@ -57,80 +57,69 @@ const SupportForm = ({ showFullContent = true }: SupportFormProps) => {
   const emailConfigured = configLoaded && isEmailConfigured()
 
   return (
-    <div className="contact-content">
+    <div className="contact-content support-page-content">
       {showFullContent && (
         <>
-          <div className="support-header-section">
+          <div className="support-header-section support-animate">
+            <span className="support-label">Dịch vụ</span>
             <h2 className="support-main-title">Dịch vụ hỗ trợ khách hàng / đối tác</h2>
             <p className="support-intro">
               Quang Minh TNA không chỉ sản xuất mà đóng vai trò <strong>hậu phương kỹ thuật</strong> cho đối tác
             </p>
           </div>
 
-          <div className="support-features-section">
-        <div className="support-section-content">
-          <h3 className="support-section-title">Dịch vụ hỗ trợ toàn diện</h3>
-          <ul className="support-features-list">
-            <li>
-              <i className="fa-solid fa-check-circle" />
-              <span>Tư vấn giải pháp sản phẩm</span>
-            </li>
-            <li>
-              <i className="fa-solid fa-check-circle" />
-              <span>Hỗ trợ cải tiến công thức theo phản hồi thị trường</span>
-            </li>
-            <li>
-              <i className="fa-solid fa-check-circle" />
-              <span>Đào tạo chuyên môn sản phẩm</span>
-            </li>
-            <li>
-              <i className="fa-solid fa-check-circle" />
-              <span>Chuyển giao kiến thức kỹ thuật</span>
-            </li>
-            <li>
-              <i className="fa-solid fa-check-circle" />
-              <span>Cung cấp tài liệu, hình ảnh, nội dung truyền thông bán hàng</span>
-            </li>
-            <li>
-              <i className="fa-solid fa-check-circle" />
-              <span>Hỗ trợ xây dựng thông điệp sản phẩm</span>
-            </li>
-          </ul>
-        </div>
-      </div>
+          <div className="support-content-grid">
+            <div className="support-features-section support-animate support-animate-delay-1">
+              <div className="support-section-content">
+                <h3 className="support-section-title">
+                  <i className="fa-solid fa-layer-group" />
+                  Dịch vụ hỗ trợ toàn diện
+                </h3>
+                <ul className="support-features-list">
+                  <li><i className="fa-solid fa-check" /><span>Tư vấn giải pháp sản phẩm</span></li>
+                  <li><i className="fa-solid fa-check" /><span>Hỗ trợ cải tiến công thức theo phản hồi thị trường</span></li>
+                  <li><i className="fa-solid fa-check" /><span>Đào tạo chuyên môn sản phẩm</span></li>
+                  <li><i className="fa-solid fa-check" /><span>Chuyển giao kiến thức kỹ thuật</span></li>
+                  <li><i className="fa-solid fa-check" /><span>Cung cấp tài liệu, hình ảnh, nội dung truyền thông bán hàng</span></li>
+                  <li><i className="fa-solid fa-check" /><span>Hỗ trợ xây dựng thông điệp sản phẩm</span></li>
+                </ul>
+              </div>
+            </div>
 
-      <div className="support-benefits-wrapper">
-        <h3 className="benefits-main-title">Giúp đối tác</h3>
-        <div className="benefits-blocks">
-          <div className="benefit-block benefit-green">
-            <div className="benefit-icon">
-              <i className="fa-solid fa-rocket" />
+            <div className="support-benefits-wrapper support-animate support-animate-delay-2">
+              <h3 className="benefits-main-title">
+                <i className="fa-solid fa-arrow-trend-up" />
+                Giúp đối tác
+              </h3>
+              <div className="benefits-blocks">
+                <div className="benefit-block">
+                  <span className="benefit-step">01</span>
+                  <div className="benefit-icon">
+                    <i className="fa-solid fa-rocket" />
+                  </div>
+                  <h4 className="benefit-title">Tự tin ra thị trường</h4>
+                </div>
+                <div className="benefit-block">
+                  <span className="benefit-step">02</span>
+                  <div className="benefit-icon">
+                    <i className="fa-solid fa-chart-line" />
+                  </div>
+                  <h4 className="benefit-title">Bán hàng bài bản hơn</h4>
+                </div>
+                <div className="benefit-block">
+                  <span className="benefit-step">03</span>
+                  <div className="benefit-icon">
+                    <i className="fa-solid fa-seedling" />
+                  </div>
+                  <h4 className="benefit-title">Gia tăng hiệu quả triển khai thực tế</h4>
+                </div>
+              </div>
             </div>
-            <h4 className="benefit-title">Tự tin ra thị trường</h4>
-            <div className="benefit-watermark">1</div>
           </div>
-          
-          <div className="benefit-block benefit-blue">
-            <div className="benefit-icon">
-              <i className="fa-solid fa-chart-line" />
-            </div>
-            <h4 className="benefit-title">Bán hàng bài bản hơn</h4>
-            <div className="benefit-watermark">2</div>
-          </div>
-          
-          <div className="benefit-block benefit-orange">
-            <div className="benefit-icon">
-              <i className="fa-solid fa-seedling" />
-            </div>
-            <h4 className="benefit-title">Gia tăng hiệu quả triển khai thực tế</h4>
-            <div className="benefit-watermark">3</div>
-          </div>
-        </div>
-      </div>
         </>
       )}
 
-      <div className="support-form-section">
+      <div className="support-form-section support-animate support-animate-delay-3">
         <h3 className="form-section-title">{showFullContent ? 'Yêu cầu hỗ trợ' : 'Liên hệ với chúng tôi'}</h3>
         <p>
           Điền form bên dưới, yêu cầu sẽ được chuyển tới bộ phận sales. Bộ phận sales sẽ liên hệ lại bạn sớm nhất.
