@@ -105,7 +105,7 @@
     &::after {
         @include before;
         background-color: $bg-color;
-        width: 91%;
+        // width: 91%;
 
         @include breakpoint (max-xl){
             width: 100%;

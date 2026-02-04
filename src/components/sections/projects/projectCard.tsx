@@ -5,9 +5,10 @@ type ProjectCardPropsType = {
     project: ProjectDataType;
     className?: string;
     iconCalss?: string;
-    isIconShow?: boolean
+    isIconShow?: boolean;
+    linkToContact?: boolean;
 }
-const ProjectCard = ({ project, className, iconCalss, isIconShow=true }: ProjectCardPropsType) => {
+const ProjectCard = ({ project, className, iconCalss, isIconShow = true, linkToContact = false }: ProjectCardPropsType) => {
     return (
         <div className={`project-items ${className}`}>
             <div className="project-image">
@@ -19,7 +20,7 @@ const ProjectCard = ({ project, className, iconCalss, isIconShow=true }: Project
                     </h4>
                     {
                         isIconShow &&
-                        <Link to={project.link} className={`${iconCalss}`}>
+                        <Link to={linkToContact ? "/lien-he" : project.link} className={`${iconCalss}`}>
                             <i className="fa-solid fa-arrow-right" />
                         </Link>
                     }

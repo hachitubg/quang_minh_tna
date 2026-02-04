@@ -16,8 +16,8 @@ const ProjectsTwo = () => {
             <div className="container">
                 <div className="section-title-area">
                     <SectionTitle>
-                        <SectionTitle.SubTitle>DỰ ÁN / GIẢI PHÁP</SectionTitle.SubTitle>
-                        <SectionTitle.Title>Giải pháp sản xuất tiêu biểu</SectionTitle.Title>
+                        <SectionTitle.SubTitle>Sản phẩm đa dạng</SectionTitle.SubTitle>
+                        <SectionTitle.Title>Quang Minh TNA đáp ứng đa dạng sản phẩm</SectionTitle.Title>
                     </SectionTitle>
                     <div className="array-button wow slideUp" data-delay=".5">
                         <button className="array-prev"><i className="fa fa-arrow-right" /></button>
@@ -65,7 +65,7 @@ const ProjectsTwo = () => {
 
                         {projectsTwoData.map((project) => (
                             <SwiperSlide key={project.id}>
-                                <ProjectCard project={project} className="style-2" iconCalss="icon" />
+                                <ProjectCard project={project} className="style-2" iconCalss="icon" linkToContact />
                             </SwiperSlide>
                         ))}
 
