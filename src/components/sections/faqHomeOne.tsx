@@ -17,14 +17,14 @@ const FaqHomeOne = () => {
                     <div className="row g-4">
                         <div className="col-lg-6 wow slideUp" data-delay=".4">
                             <div className="faq-image">
-                                <img src="/img/faq/faq.png" alt="faq-img" />
+                                <img src="/img_quangminh/may nghien nano.jpg" alt="faq-img" />
                             </div>
                         </div>
                         <div className="col-lg-6">
                             <div className="faq-content">
                                 <SectionTitle>
-                                    <SectionTitle.SubTitle>See Our Faqs</SectionTitle.SubTitle>
-                                    <SectionTitle.Title>Frequently asked question</SectionTitle.Title>
+                                    <SectionTitle.SubTitle>Tại sao chọn chúng tôi</SectionTitle.SubTitle>
+                                    <SectionTitle.Title>Công nghệ lõi & lợi ích nano</SectionTitle.Title>
                                 </SectionTitle>
                                 <div className="faq-accordion mt-4 mt-md-0">
                                     <div className="accordion" id="accordion">
@@ -44,7 +44,19 @@ const FaqHomeOne = () => {
                                                 </h5>
                                                 <div id={faq.id} className={`accordion-collapse collapse ${faq.isOpen ? 'show' : ''}`} data-bs-parent="#accordion">
                                                     <div className="accordion-body">
-                                                        {faq.answer}
+                                                        {(typeof faq.answer === 'string' && faq.answer.includes(' + ')
+                                                            ? faq.answer.split(/\s*\+\s*/).filter(Boolean)
+                                                            : [faq.answer]
+                                                        ).map((item: string, idx: number) => (
+                                                            <div key={idx} className="faq-answer-item d-flex align-items-start gap-2 mb-2">
+                                                                <span className="faq-answer-icon flex-shrink-0 mt-1" aria-hidden>
+                                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M15 4.5L6.75 12.75L3 9" stroke="#77B80F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                                    </svg>
+                                                                </span>
+                                                                <span className="faq-answer-text">{item.trim()}</span>
+                                                            </div>
+                                                        ))}
                                                     </div>
                                                 </div>
                                             </div>

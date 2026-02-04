@@ -1,6 +1,6 @@
 import AboutTwo from "@/components/sections/about/aboutTwo"
-import ChooseUs from "@/components/sections/chooseUs"
 import HomeContactOne from "@/components/sections/contact/homeContactOne"
+import FaqHomeOne from "@/components/sections/faqHomeOne"
 import HeroTwo from "@/components/sections/heros/heroTwo"
 import MarqueThree from "@/components/sections/marques/marqueThree"
 import Offer from "@/components/sections/offer"
@@ -15,7 +15,7 @@ const HomeTwo = () => {
       <AboutTwo/>
       <MarqueThree/>
       <ServicesTwo/>
-      <ChooseUs/>
+      <FaqHomeOne/>
       <PartnersOne/>
       <HomeContactOne/>
     </>

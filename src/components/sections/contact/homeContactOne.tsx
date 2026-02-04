@@ -4,7 +4,7 @@ const HomeContactOne = () => {
     return (
         <div id="lien-he" className="contact-section-21 section-padding section-bg">
             <div className="contact-image-2">
-                <img src="/img_quangminh/4.jpg" alt="img" />
+                <img src="/img_quangminh/banner nha may 2.jpg" alt="img" />
             </div>
             <div className="contact-wrapper-21">
                 <div className="container">
