@@ -50,8 +50,12 @@ const GioiThieu = () => {
           <div className="about-wrapper-2 style-2">
             <div className="row align-items-center">
               <div className="col-lg-6">
-                <div className="about-image-2 about-animate">
-                  <img src="/img_quangminh/may nghien nano 2.jpg" alt="Nhà máy Quang Minh TNA" />
+                <div className="about-image-items about-image-items--triple">
+                  <div className="about-image-2 wow slideUp" data-delay=".5">
+                    <img src="/img_quangminh/cong_nghe_loi_01.jpg" alt="Công nghệ lõi - Dây chuyền sản xuất Quang Minh TNA" />
+                  </div>
+                  <div className="about-image-1 bg-cover wow slideLeft" data-delay=".3" style={{ backgroundImage: 'url("/img_quangminh/cong_nghe_loi_03.jpg")' }} aria-hidden />
+                  <div className="about-image-3 bg-cover wow slideRight" data-delay=".4" style={{ backgroundImage: 'url("/img_quangminh/cong_nghe_loi_02.jpg")' }} aria-hidden />
                 </div>
               </div>
               <div className="col-lg-6 mt-4 mt-lg-0">
