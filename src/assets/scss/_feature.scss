@@ -621,6 +621,63 @@
         }
     }
 
+    /* PC: 3 bước/dòng (hoặc 2 trên tablet), icon luôn trên, line nối giữa các bước */
+    &.process-work-wrapper--grid {
+        .line-shape {
+            top: 50px;
+            width: 85%;
+            max-width: 900px;
+            pointer-events: none;
+
+            @include breakpoint (max-xxl) {
+                display: block;
+            }
+
+            @include breakpoint (max-xl) {
+                top: 48px;
+                width: 90%;
+            }
+
+            @include breakpoint (max-lg) {
+                top: 48px;
+            }
+
+            @include breakpoint (max-md) {
+                display: none;
+            }
+        }
+
+        .row {
+            position: relative;
+            z-index: 1;
+        }
+
+        .work-process-items {
+            margin-top: 0;
+            margin-bottom: 24px;
+
+            .content {
+                margin-top: 20px;
+                margin-bottom: 0;
+
+                h4 {
+                    font-size: 1rem;
+                    margin-bottom: 6px;
+
+                    @include breakpoint (max-xl) {
+                        font-size: 0.95rem;
+                    }
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 1.45;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
     /* Trang Giới thiệu: PC hiển thị 1 cột, icon trái + text trái */
     &.process-work-wrapper--vertical {
         .row {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import PageTitle from "@/components/sections/pageTitle"
-import WorkProcessCarousel from "@/components/sections/workProcess/WorkProcessCarousel"
+import WorkProcess from "@/components/sections/workProcess"
 import SectionTitle from "@/components/ui/sectionTitle"
 import { quyTrinhSanXuatData, sanPhamData } from "@/db/gioiThieuData"
 import { Link } from "react-router-dom"
@@ -95,11 +95,12 @@ const GioiThieu = () => {
         </div>
       </section>
 
-        {/* Quy trình sản xuất 7 bước - Carousel style project */}
-        <WorkProcessCarousel
+        {/* Quy trình sản xuất 7 bước - layout process-work-wrapper + line-shape */}
+        <WorkProcess
           data={quyTrinhSanXuatData}
           subTitle="Quy trình gia công"
           title="7 bước gia công trọn gói"
+          sectionId="quy-trinh-7-buoc"
         />
 
         {/* Sản phẩm đa dạng */}

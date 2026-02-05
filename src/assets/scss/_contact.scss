@@ -599,6 +599,73 @@
     }
 }
 
+// Work process section - circle shape nền (giống about)
+.work-process-section {
+    position: relative;
+    overflow: hidden;
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .about-shape {
+        position: absolute;
+        z-index: 0;
+        pointer-events: none;
+        animation: cir36 10s linear infinite;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        &.about-shape-1 {
+            top: 10%;
+            right: 4%;
+            width: 160px;
+            height: 160px;
+            opacity: 0.4;
+
+            @include breakpoint (max-xl) {
+                width: 110px;
+                height: 110px;
+                top: 8%;
+                right: 2%;
+            }
+
+            @include breakpoint (max-md) {
+                width: 70px;
+                height: 70px;
+                opacity: 0.3;
+            }
+        }
+
+        &.about-shape-2 {
+            bottom: 12%;
+            left: 4%;
+            width: 140px;
+            height: 140px;
+            opacity: 0.35;
+            animation-direction: reverse;
+            animation-duration: 14s;
+
+            @include breakpoint (max-xl) {
+                width: 100px;
+                height: 100px;
+                bottom: 8%;
+            }
+
+            @include breakpoint (max-md) {
+                width: 60px;
+                height: 60px;
+                opacity: 0.25;
+            }
+        }
+    }
+}
+
 .about-page-section .about-shape {
     position: absolute;
     z-index: 0;
