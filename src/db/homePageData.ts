@@ -12,10 +12,10 @@ export const heroData = {
 }
 
 export const achievementData = [
-  { id: 1, icon: "/img/achievement-icon/01.svg", count: 100000, description: "Sản phẩm/ngày", delay: ".3" },
-  { id: 2, icon: "/img/achievement-icon/02.svg", count: 20, description: "Thương hiệu đối tác", delay: ".5" },
-  { id: 3, icon: "/img/achievement-icon/03.svg", count: 5, description: "Ngày gia công trọn gói", delay: ".7" },
-  { id: 4, icon: "/img/achievement-icon/04.svg", count: 100, description: "Chất lượng ổn định", delay: ".9" },
+  { id: 1, icon: "/img_quangminh/icon/products2.png", count: 100000, description: "Sản phẩm/ngày", delay: ".3" },
+  { id: 2, icon: "/img_quangminh/icon/partners.png", count: 20, description: "Thương hiệu đối tác", delay: ".5" },
+  { id: 3, icon: "/img_quangminh/icon/productivity.png", count: 5, description: "Ngày gia công trọn gói", delay: ".7" },
+  { id: 4, icon: "/img_quangminh/icon/high-quality.png", count: 100, description: "Chất lượng ổn định", delay: ".9" },
 ]
 
 export const marqueeItems = [

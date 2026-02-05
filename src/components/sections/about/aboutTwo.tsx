@@ -64,7 +64,7 @@ const AboutTwo = () => {
                                     <div className="about-icon-items">
                                         <div className="icon-items wow slideUp" data-delay=".9">
                                             <div className="icon p-2">
-                                                <img src="/img/about/icon-5.svg" alt="icon-img" />
+                                                <img src="/img_quangminh/icon/daychuyenchauau.png" alt="icon-img" />
                                             </div>
                                             <div className="content">
                                                 <h4>Dây chuyền châu Âu</h4>
@@ -77,7 +77,7 @@ const AboutTwo = () => {
                                     <div className="about-icon-items">
                                         <div className="icon-items wow slideUp" data-delay=".7">
                                             <div className="icon p-2">
-                                                <img src="/img/about/icon-4.svg" alt="icon-img" />
+                                                <img src="/img_quangminh/icon/nano_green.png" alt="icon-img" />
                                             </div>
                                             <div className="content">
                                                 <h4>Công nghệ nano</h4>
@@ -90,7 +90,7 @@ const AboutTwo = () => {
                                     <div className="about-icon-items">
                                         <div className="icon-items wow slideUp" data-delay=".7">
                                             <div className="icon p-2">
-                                                <img src="/img/about/icon-1.svg" alt="icon-img" />
+                                                <img src="/img_quangminh/icon/giacongnhanhchong.png" alt="icon-img" />
                                             </div>
                                             <div className="content">
                                                 <h4>Gia công nhanh chóng</h4>
