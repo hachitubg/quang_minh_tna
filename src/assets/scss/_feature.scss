@@ -245,6 +245,26 @@
         margin: 0 auto;
         margin-top: -35px;
         @include transition;
+
+        &.icon--png {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 0;
+
+            .icon-default,
+            .icon-hover {
+                position: absolute;
+                width: 45px;
+                height: 45px;
+                object-fit: contain;
+                @include transition;
+            }
+            .icon-hover {
+                opacity: 0;
+            }
+        }
     }
 
     .content {
@@ -296,6 +316,15 @@
             svg path {
                 fill: #fff;
             }
+
+            &.icon--png {
+                .icon-default {
+                    opacity: 0;
+                }
+                .icon-hover {
+                    opacity: 1;
+                }
+            }
         }
     }
 
@@ -321,6 +350,15 @@
 
             svg path {
                 fill: #fff;
+            }
+
+            &.icon--png {
+                .icon-default {
+                    opacity: 0;
+                }
+                .icon-hover {
+                    opacity: 1;
+                }
             }
         }
     }

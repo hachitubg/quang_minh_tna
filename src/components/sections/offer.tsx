@@ -1,8 +1,17 @@
-import { PhanBonBot, PhanBonNuoc, NanoIcon, PhanBonHat, PhanBonHuuCo, ThuocBVTV } from "@/lib/icons"
+import type { FC } from "react"
+import { NanoIcon } from "@/lib/icons"
 import SectionTitle from "../ui/sectionTitle"
 import { offerItems } from "@/db/homePageData"
 
-const iconMap = [PhanBonHat, PhanBonBot, PhanBonNuoc, PhanBonHuuCo, ThuocBVTV, NanoIcon]
+const pngIcons: Record<number, { green: string; white: string }> = {
+    1: { green: "/img_quangminh/icon/phanbonhat_green.png", white: "/img_quangminh/icon/phanbonhat_white.png" },
+    2: { green: "/img_quangminh/icon/phanbonbot_green.png", white: "/img_quangminh/icon/phanbonbot_white.png" },
+    3: { green: "/img_quangminh/icon/phanbonnuoc_green.png", white: "/img_quangminh/icon/phanbonnuoc_white.png" },
+    4: { green: "/img_quangminh/icon/phanbonhuuco_green.png", white: "/img_quangminh/icon/phanbonhuuco_white.png" },
+    5: { green: "/img_quangminh/icon/thuocbvtv_green.png", white: "/img_quangminh/icon/thuocbvtv_white.png" },
+    6: { green: "/img_quangminh/icon/nano_green.png", white: "/img_quangminh/icon/nano_white.png" },
+}
+const svgIconMap: Record<number, FC> = { 6: NanoIcon }
 
 const scrollToContact = () => {
     const el = document.getElementById("lien-he")
@@ -42,7 +51,17 @@ const Offer = () => {
                                 <div className="shape-bottom">
                                     <img src="/img/shape/offer-bottom.png" alt="shape-img" />
                                 </div>
-                                <div className="icon">{(() => { const Icon = iconMap[(item.id as number) - 1]; return Icon ? <Icon /> : null })()}</div>
+                                <div className={`icon ${pngIcons[item.id as number] ? "icon--png" : ""}`}>
+                                    {pngIcons[item.id as number] ? (
+                                        <>
+                                            <img src={pngIcons[item.id as number].green} alt="" className="icon-default" aria-hidden />
+                                            <img src={pngIcons[item.id as number].white} alt="" className="icon-hover" aria-hidden />
+                                        </>
+                                    ) : (() => {
+                                        const Icon = svgIconMap[item.id as number]
+                                        return Icon ? <Icon /> : null
+                                    })()}
+                                </div>
                                 <div className="content">
                                     <h5>{item.title}</h5>
                                 </div>
