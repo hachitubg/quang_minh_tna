@@ -12,7 +12,7 @@ export type WorkProcessProps = {
 }
 
 const WorkProcess = ({ data = workProcessData, subTitle = "Our Process", title = "Our Work Process", verticalOnDesktop = false, sectionId }: WorkProcessProps) => {
-    const colClass = verticalOnDesktop ? "col-12" : "col-xl-4 col-lg-4 col-md-6 p-3"
+    const colClass = verticalOnDesktop ? "col-12" : "col-xl-4 col-lg-4 col-md-6 p-4"
     const wrapperMod = verticalOnDesktop ? "process-work-wrapper--vertical" : "process-work-wrapper--grid"
     return (
         <section id={sectionId} className="work-process-section fix section-padding pt-0">
