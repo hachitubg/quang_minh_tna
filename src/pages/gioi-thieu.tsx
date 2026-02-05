@@ -52,7 +52,7 @@ const GioiThieu = () => {
               <div className="col-lg-6">
                 <div className="about-image-items about-image-items--triple">
                   <div className="about-image-2 wow slideUp" data-delay=".5">
-                    <img src="/img_quangminh/cong_nghe_loi_01.jpg" alt="Công nghệ lõi - Dây chuyền sản xuất Quang Minh TNA" />
+                    <img src="/img_quangminh/day_chuyen_san_xuat.png" alt="Công nghệ lõi - Dây chuyền sản xuất Quang Minh TNA" />
                   </div>
                   <div className="about-image-1 bg-cover wow slideLeft" data-delay=".3" style={{ backgroundImage: 'url("/img_quangminh/cong_nghe_loi_03.jpg")' }} aria-hidden />
                   <div className="about-image-3 bg-cover wow slideRight" data-delay=".4" style={{ backgroundImage: 'url("/img_quangminh/cong_nghe_loi_02.jpg")' }} aria-hidden />
