@@ -803,6 +803,38 @@
         position: relative;
         z-index: 1;
     }
+
+    /* Nền mờ phía sau tiêu đề mỗi phần — đậm giữa, nhạt dần 2 bên */
+    .section-title {
+        position: relative;
+        padding: 20px 24px;
+        margin-left: -24px;
+        margin-right: -24px;
+        padding-left: 24px;
+        padding-right: 24px;
+
+        @include breakpoint (max-md) {
+            margin-left: -16px;
+            margin-right: -16px;
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            border-radius: 12px;
+            background: linear-gradient(90deg, transparent 0%, rgba(119, 184, 15, 0.06) 15%, rgba(119, 184, 15, 0.12) 50%, rgba(119, 184, 15, 0.06) 85%, transparent 100%);
+            pointer-events: none;
+        }
+    }
 }
 
 .about-page-products,
