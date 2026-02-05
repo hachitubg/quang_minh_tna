@@ -63,7 +63,7 @@ const AboutTwo = () => {
                                 <div className="col-12 col-md-4 mb-3 mb-md-0">
                                     <div className="about-icon-items">
                                         <div className="icon-items wow slideUp" data-delay=".9">
-                                            <div className="icon">
+                                            <div className="icon p-2">
                                                 <img src="/img/about/icon-5.svg" alt="icon-img" />
                                             </div>
                                             <div className="content">
@@ -76,7 +76,7 @@ const AboutTwo = () => {
                                 <div className="col-12 col-md-4 mb-3 mb-md-0">
                                     <div className="about-icon-items">
                                         <div className="icon-items wow slideUp" data-delay=".7">
-                                            <div className="icon">
+                                            <div className="icon p-2">
                                                 <img src="/img/about/icon-4.svg" alt="icon-img" />
                                             </div>
                                             <div className="content">
@@ -89,7 +89,7 @@ const AboutTwo = () => {
                                 <div className="col-12 col-md-4 mb-3 mb-md-0">
                                     <div className="about-icon-items">
                                         <div className="icon-items wow slideUp" data-delay=".7">
-                                            <div className="icon">
+                                            <div className="icon p-2">
                                                 <img src="/img/about/icon-1.svg" alt="icon-img" />
                                             </div>
                                             <div className="content">
