@@ -1,10 +1,12 @@
 .brand-wrapper {
-    h6 {
+    h6,
+    .brand-wrapper__title {
         font-size: 22px;
         position: relative;
         margin-bottom: 50px;
         color: $header-color;
         font-weight: 600;
+        text-align: center;
 
         &::before {
             position: absolute;
@@ -15,7 +17,7 @@
             width: 430px;
             background-color: $border-color;
 
-            @include breakpoint (max-xxl){
+            @include breakpoint (max-xxl) {
                 display: none;
             }
         }
@@ -29,27 +31,55 @@
             width: 430px;
             background-color: $border-color;
 
-            @include breakpoint (max-xxl){
+            @include breakpoint (max-xxl) {
                 display: none;
             }
         }
     }
+
     .brand-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 15px;
+        min-height: 120px;
         text-align: center;
         filter: grayscale(100%);
         @include transition;
-        opacity: .4;
+
+        opacity: 0.5;
+
+        img {
+            max-height: 80px;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+            vertical-align: middle;
+        }
 
         &:hover {
-            filter: initial;
+            filter: none;
             opacity: 1;
         }
     }
 
-    .swiper-slide.swiper-slide-active{
+    .swiper-slide.swiper-slide-active .brand-image {
+        filter: none;
+        opacity: 1;
+    }
+
+    &.brand-wrapper--partners {
+        .brand-wrapper__slider {
+            padding: 10px 0 20px;
+        }
+
         .brand-image {
-            filter: initial;
-            opacity: 1;
+            min-height: 130px;
+            padding: 24px 20px;
+
+            img {
+                max-height: 90px;
+            }
         }
     }
 }

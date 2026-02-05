@@ -63,7 +63,7 @@ const AboutTwo = () => {
                                 <div className="col-12 col-md-4 mb-3 mb-md-0">
                                     <div className="about-icon-items">
                                         <div className="icon-items wow slideUp" data-delay=".9">
-                                            <div className="icon p-2">
+                                            <div className="p-2">
                                                 <img src="/img_quangminh/icon/daychuyenchauau.png" alt="icon-img" />
                                             </div>
                                             <div className="content">
@@ -76,7 +76,7 @@ const AboutTwo = () => {
                                 <div className="col-12 col-md-4 mb-3 mb-md-0">
                                     <div className="about-icon-items">
                                         <div className="icon-items wow slideUp" data-delay=".7">
-                                            <div className="icon p-2">
+                                            <div className="p-2">
                                                 <img src="/img_quangminh/icon/nano_green.png" alt="icon-img" />
                                             </div>
                                             <div className="content">
@@ -89,7 +89,7 @@ const AboutTwo = () => {
                                 <div className="col-12 col-md-4 mb-3 mb-md-0">
                                     <div className="about-icon-items">
                                         <div className="icon-items wow slideUp" data-delay=".7">
-                                            <div className="icon p-2">
+                                            <div className="p-2">
                                                 <img src="/img_quangminh/icon/giacongnhanhchong.png" alt="icon-img" />
                                             </div>
                                             <div className="content">
