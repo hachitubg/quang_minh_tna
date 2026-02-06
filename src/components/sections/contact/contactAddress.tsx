@@ -49,7 +49,7 @@ const ContactAddress = () => {
         {/* Zalo, Facebook, TikTok */}
         <div className="contact-info-items border-none">
           <div className="content">
-            <p className="mb-2">Kết nối với chúng tôi</p>
+            <p className="contact-connect-title mb-2">Kết nối với chúng tôi</p>
             <div className="social-icon d-flex align-items-center gap-3 flex-wrap">
               <a
                 href={companyInfo.social.zalo}

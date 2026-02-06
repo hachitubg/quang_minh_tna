@@ -15,9 +15,23 @@ const FaqHomeOne = () => {
             <div className="container">
                 <div className="faq-wrapper">
                     <div className="row g-4">
-                        <div className="col-lg-6 wow slideUp" data-delay=".4">
-                            <div className="faq-image">
-                                <img src="/img_quangminh/may nghien nano.jpg" alt="faq-img" />
+                        <div className="col-lg-6">
+                            <div className="about-image-items about-image-items--triple faq-triple-images">
+                                <div className="about-image-2 wow slideUp" data-delay=".5">
+                                    <img src="/img_quangminh/cong_nghe_loi_01.jpg" alt="Công nghệ lõi - Dây chuyền sản xuất Quang Minh TNA" />
+                                </div>
+                                <div
+                                    className="about-image-1 bg-cover wow slideLeft"
+                                    data-delay=".3"
+                                    aria-hidden
+                                    style={{ backgroundImage: 'url("/img_quangminh/cong_nghe_loi_02.jpg")' }}
+                                />
+                                <div
+                                    className="about-image-3 bg-cover wow slideRight"
+                                    data-delay=".4"
+                                    aria-hidden
+                                    style={{ backgroundImage: 'url("/img_quangminh/day_chuyen_san_xuat.png")' }}
+                                />
                             </div>
                         </div>
                         <div className="col-lg-6">

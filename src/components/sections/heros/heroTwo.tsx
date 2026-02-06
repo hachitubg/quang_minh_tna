@@ -4,7 +4,7 @@ import { heroData } from "@/db/homePageData"
 
 const HeroTwo = () => {
     return (
-        <section className="hero-section hero-2 fix bg-cover" style={{ backgroundImage: 'linear-gradient(rgba(50, 50, 50, 0.2), rgba(30, 30, 30, 0.3)), url("/img_quangminh/banner nha may 1.jpg")' }}>
+        <section className="hero-section hero-2 fix bg-cover" style={{ backgroundImage: 'url("/img_quangminh/backgound.jpg")' }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6">

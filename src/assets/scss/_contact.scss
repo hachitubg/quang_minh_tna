@@ -272,41 +272,57 @@
 
             .contact-info-items {
                 @include flex;
-                gap: 20px;
+                align-items: flex-start;
+                gap: 16px;
                 position: relative;
                 padding-bottom: 20px;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        
-                @include breakpoint (max-xl){
-                    flex-wrap: wrap;
-                }
-        
+                flex-wrap: nowrap;
+
                 .icon {
                     width: 65px;
                     height: 65px;
+                    min-width: 65px;
+                    min-height: 65px;
                     line-height: 65px;
                     text-align: center;
                     position: relative;
-        
+                    overflow: visible;
+                    flex-shrink: 0;
+                    margin-top: 17px;
+
                     &::before {
                         @include before;
+                        top: -17px;
                         background-repeat: no-repeat;
                         background-size: cover;
                         background-image: url('/img/circle-3.png');
                         animation: cir36 10s linear infinite;
                     }
+
+                    svg {
+                        display: block;
+                        margin: 0 auto;
+                        vertical-align: middle;
+                    }
                 }
-        
+
                 .content {
+                    flex: 1;
+                    min-width: 0;
+
                     p {
                         color: $white;
-                        margin-bottom: 5px;
+                        margin-bottom: 4px;
+                        font-size: 0.8125rem;
                     }
-        
+
                     h3 {
-                        font-size: 24px;
+                        font-size: 1rem;
+                        font-weight: 600;
                         color: $white;
-        
+                        line-height: 1.4;
+
                         a {
                             color: $white;
                         }
@@ -315,6 +331,31 @@
 
                 &.border-none {
                     border: none !important;
+
+                    .contact-connect-title {
+                        font-size: 1.35rem;
+                        font-weight: 600;
+                        color: $white;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .social-icon a {
+                        color: $white;
+
+                        i,
+                        span {
+                            color: $white;
+                        }
+
+                        &:hover {
+                            color: rgba(255, 255, 255, 0.9);
+
+                            i,
+                            span {
+                                color: rgba(255, 255, 255, 0.9);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -568,7 +609,7 @@
     .about-image-3 {
         position: absolute;
         bottom: -55px;
-        right: -45px;
+        right: -15px;
         width: 200px;
         height: 150px;
         border-radius: 10px;

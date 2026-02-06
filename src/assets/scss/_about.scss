@@ -67,7 +67,7 @@
 
             .about-image-2 {
                 position: absolute;
-                bottom: -13%;
+                bottom: -20%;
                 right: -35%;
 
                 @include breakpoint (max-xxl){
@@ -262,7 +262,7 @@
             }
 
             .about-image-1 {
-                max-width: 386px;
+                max-width: 600px;
                 height: 415px;
 
                 @include breakpoint (max-lg){
@@ -283,7 +283,7 @@
                 .about-image-2 {
                     border: 2px solid $white;
                     box-shadow: $shadow;
-                    right: -40%;
+                    right: -5%;
 
                     @include breakpoint (max-xl){
                         right: -20%;

@@ -31,7 +31,7 @@ export const companyInfo = {
   // Mạng xã hội - cập nhật URL khi có
   social: {
     zalo: "https://zalo.me/0961167791",
-    facebook: "https://facebook.com/quangminhtna",
+    facebook: "https://www.facebook.com/profile.php?id=61586465635116",
     tiktok: "https://tiktok.com/@quangminhtna",
     // Thêm YouTube, LinkedIn nếu có
   },

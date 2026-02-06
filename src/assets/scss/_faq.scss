@@ -186,6 +186,15 @@
         }
     }
 
+    // Layout 3 ảnh giống about, không dùng border-radius
+    .faq-triple-images.about-image-items--triple {
+        .about-image-2,
+        .about-image-1,
+        .about-image-3 {
+            border-radius: 0;
+        }
+    }
+
     .faq-about-image-items {
         position: relative;
         min-height: 380px;
