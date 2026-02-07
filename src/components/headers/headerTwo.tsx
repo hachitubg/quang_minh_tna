@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import TopHeaderOne from "./topHeaderOne"
+// import TopHeaderOne from "./topHeaderOne"
 import Navbar from "./navbar"
 import SearchPopup from "./searchPopup"
 import useSticky from "@/hooks/useSticky"
