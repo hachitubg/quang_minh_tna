@@ -1276,11 +1276,11 @@
 			z-index: 9;
 
 			@include breakpoint(max-lg) {
-				font-size: 52px;
+				font-size: 42px;
 			}
 
 			@include breakpoint(max-sm) {
-				font-size: 42px;
+				font-size: 34px;
 			}
 		}
 

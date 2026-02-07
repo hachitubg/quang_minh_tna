@@ -7,7 +7,7 @@ const HeroTwo = () => {
         <section className="hero-section hero-2 fix bg-cover" style={{ backgroundImage: 'url("/img_quangminh/backgound.jpg")', height: '100vh' }}>
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-9">
+                    <div className="col-lg-7">
                         <div className="hero-content">
                             <motion.h1
                                 initial={{ y: 40 }}
