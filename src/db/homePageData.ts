@@ -4,7 +4,7 @@
  */
 
 export const heroData = {
-  title: "Công nghệ tiên phong – Nông nghiệp bứt phá",
+  titleLines: ["Công nghệ tiên phong", "Nông nghiệp bứt phá"],
   subtitle:
     "Nhà máy sản xuất phân bón và thuốc bảo vệ thực vật ứng dụng công nghệ nano. Gia công trọn gói cho doanh nghiệp phát triển thương hiệu riêng – đối tác của hơn 20 thương hiệu trên toàn quốc.",
   btnPrimary: { text: "Xem thêm", link: "/gioi-thieu" },

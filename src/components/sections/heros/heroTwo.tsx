@@ -7,7 +7,7 @@ const HeroTwo = () => {
         <section className="hero-section hero-2 fix bg-cover" style={{ backgroundImage: 'url("/img_quangminh/backgound.jpg")', height: '100vh' }}>
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6">
+                    <div className="col-lg-9">
                         <div className="hero-content">
                             <motion.h1
                                 initial={{ y: 40 }}
@@ -16,7 +16,12 @@ const HeroTwo = () => {
                                     duration: .5
                                 }}
                             >
-                                {heroData.title}
+                                {heroData.titleLines.map((line, i) => (
+                                    <span key={i}>
+                                        {line}
+                                        {i < heroData.titleLines.length - 1 && <br />}
+                                    </span>
+                                ))}
                             </motion.h1>
                             <motion.p
                                 initial={{ y: 40 }}
