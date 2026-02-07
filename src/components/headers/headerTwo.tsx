@@ -10,7 +10,7 @@ const HeaderTwo = () => {
     const [isSticky] = useSticky()
     return (
         <header className="header-section-2">
-            <TopHeaderOne className="top-style-2" wrapperClass="style-2" />
+            {/* <TopHeaderOne className="top-style-2" wrapperClass="style-2" /> */}
             <div id="header-sticky" className={`header-2 ${isSticky ? 'sticky' : ''}`}>
                 <div className="main-logo">
                     <Link to="/">
