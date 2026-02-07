@@ -12,14 +12,12 @@ const HeroTwo = () => {
                             <motion.h1
                                 initial={{ y: 40 }}
                                 animate={{ y: 0 }}
-                                transition={{
-                                    duration: .5
-                                }}
+                                transition={{ duration: 0.5 }}
+                                className="hero-title-lines"
                             >
                                 {heroData.titleLines.map((line, i) => (
-                                    <span key={i}>
+                                    <span key={i} className="hero-title-line">
                                         {line}
-                                        {i < heroData.titleLines.length - 1 && <br />}
                                     </span>
                                 ))}
                             </motion.h1>

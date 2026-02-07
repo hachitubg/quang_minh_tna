@@ -179,38 +179,39 @@
         z-index: 9;
 
         @include breakpoint (max-xxl){
-            padding: 180px 0;
+            padding: 300px 0;
         }
 
         @include breakpoint (max-md){
             text-align: center;
             margin: 0 auto;
-            padding: 130px 0;
+            padding: 255px 0;
         }
 
         h1 {
             color: $white;
-            font-size: 75px;
+            font-size: 65px;
             margin-bottom: 30px;
 
-            @include breakpoint (max-xl){
-                font-size: 70px;
-
-                br {
-                    display: none;
-                }
+            .hero-title-line {
+                display: block;
+                padding: 5px 0;
             }
 
-            @include breakpoint (max-lg){
+            @include breakpoint (max-xl){
                 font-size: 60px;
             }
 
+            @include breakpoint (max-lg){
+                font-size: 50px;
+            }
+
             @include breakpoint (max-md){
-                font-size: 48px;
+                font-size: 43px;
             }
 
             @include breakpoint (max-sm){
-                font-size: 34px;
+                font-size: 32px;
             }
         }
 
